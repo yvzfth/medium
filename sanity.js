@@ -2,7 +2,7 @@ import {
   createImageUrlBuilder,
   createCurrentUserHook,
   createClient,
-} from 'next-sanity'
+} from 'next-sanity';
 
 export const config = {
   // Find your project ID and dataset in nasity.json in your studio project.
@@ -12,25 +12,25 @@ export const config = {
 
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  apiVersion: '2021-03-25',
+  apiVersion: '2021-08-31',
 
   // Set useCdn to 'false' if your application require the freshest possible
   // data always (potentially slightly slower and bit more expensive).
   // Authenticated request (like previous) will always bypass the CDN
 
   useCdn: process.env.NODE_ENV === 'production',
-}
+};
 
 // Set up the client fot fetching data in the getProps page functions
 
-export const sanityClient = createClient(config)
+export const sanityClient = createClient(config);
 
 // Set up a helper function for generating Image URLs with only the asset
 // reference data in your documents.
 // read more: https://www.sanity.io/docs/image-url
 
-export const urlFor = (source) => createImageUrlBuilder(config).image(source)
+export const urlFor = (source) => createImageUrlBuilder(config).image(source);
 
 // Helper function for using the current logged in user account
 
-export const useCurrentUser = createCurrentUserHook(config)
+export const useCurrentUser = createCurrentUserHook(config);

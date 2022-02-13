@@ -1,3 +1,7 @@
+## Install sanity client
+
+`npm i @sanity/client`
+
 ## INIT sanity
 
 `sanity init --coupon sonny2022`
@@ -5,6 +9,14 @@
 ## Install next sanity
 
 `npm i next-sanity`
+
+## Install react portable text
+
+`npm i react-portable-text`
+
+## Install react hook form
+
+`npm i react-hook-form`
 
 # Next.js + Tailwind CSS Example
 
