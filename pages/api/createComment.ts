@@ -13,7 +13,7 @@ export default async function createComment(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { _id, name, email, comment } = await JSON.parse(req.body);
+  const { _id, name, email, comment } = JSON.parse(req.body);
 
   try {
     client.create({
