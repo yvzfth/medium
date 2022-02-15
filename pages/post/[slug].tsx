@@ -5,7 +5,7 @@ import { GetStaticProps } from 'next';
 import PortableText from 'react-portable-text';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
-
+import React from 'react';
 interface IFormInput {
   _id: string;
   name: string;
